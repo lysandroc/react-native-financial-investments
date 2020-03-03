@@ -7,12 +7,13 @@ import {
 	AmountInvested,
 	Percentage,
 	ChartSection,
+	Chart,
 	Earning,
 	EarningText,
 	Header,
 	Logo,
 } from './styled';
-import { VictoryBar, VictoryChart, VictoryTheme, Chart } from 'victory-native';
+import { VictoryBar, VictoryChart, VictoryTheme } from 'victory-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 const data = [
@@ -48,9 +49,11 @@ const Home = () => {
 						<AmountInvested>R$ 407.239,28</AmountInvested>
 					</Earning>
 					<ChartSection>
-						<VictoryChart theme={VictoryTheme.material}>
-							<VictoryBar data={data} x="quarter" y="earnings" />
-						</VictoryChart>
+						<Chart>
+							<VictoryChart width={350} theme={VictoryTheme.material}>
+								<VictoryBar data={data} x="quarter" y="earnings" />
+							</VictoryChart>
+						</Chart>
 					</ChartSection>
 				</Card>
 			</View>
