@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { VictoryBar, VictoryChart, VictoryTheme } from 'victory-native';
 
 export const View = styled.View`
 	display: flex;
@@ -12,7 +13,7 @@ export const Text = styled.Text`
 	justify-content: center;
 	font-family: 'Poppins-Bold';
 	font-weight: ${({ bold }) => (bold ? 'bold' : 'normal')};
-	font-size: ${({ large }) => (large ? '20px' : '16px')};
+	font-size: ${({ large }) => (large ? '16px' : '14px')};
 	text-align: ${({ center }) => (center ? 'center' : 'left')};
 	color: ${({ dark }) => (dark ? '#1c2124' : '#ffffff')};
 `;
@@ -46,48 +47,43 @@ export const Earning = styled.View`
 	flex-basis: 20%;
 	flex-direction: row;
 	flex-wrap: wrap;
-	border: 1px solid red;
+	align-content: center;
 `;
 
 export const EarningText = styled(Text)`
 	flex: 1 100%;
 	color: #505d65;
 	font-size: 42px;
-	font-weight: bold;
-	padding-top: 30px;
-	border: 1px solid red;
 `;
 
 export const Percentage = styled(Text)`
 	flex: 1 50%;
-	color: #505d65;
-	font-size: 16px;
-	text-align: center;
-	font-weight: bold;
-
-	border: 1px solid red;
+	color: green;
 `;
 
 export const AmountInvested = styled(Text)`
 	flex: 1 50%;
 	color: #505d65;
-	font-size: 16px;
-	/* text-align: center; */
-	font-weight: bold;
-
-	border: 1px solid red;
 `;
 
 export const ChartSection = styled.View`
-	flex-basis: 75%;
+	flex: 1 100%;
+	align-content: center;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	/* justify-content: center;
-	align-items: flex-end; */
-	border: 1px solid brown;
 `;
 
-export const Chart = styled.View`
-	border: 1px solid red;
+export const CardTitle = styled(Text)`
+	flex: 1 100%;
+	font-family: 'Poppins-Medium';
+	font-size: 18px;
+`;
+
+export const ChartFilterOption = styled.TouchableOpacity`
+	flex: 1 100%;
+	border: 1px solid gray;
+	border-radius: 4px;
+	max-width: 60px;
+	margin: auto;
 `;

@@ -7,7 +7,9 @@ import {
 	AmountInvested,
 	Percentage,
 	ChartSection,
+	CardTitle,
 	Chart,
+	ChartFilterOption,
 	Earning,
 	EarningText,
 	Header,
@@ -45,15 +47,43 @@ const Home = () => {
 						<EarningText dark center>
 							R$ 817.239,28
 						</EarningText>
-						<Percentage>+280%</Percentage>
-						<AmountInvested>R$ 407.239,28</AmountInvested>
+						<Percentage bold large center>
+							+280%
+						</Percentage>
+						<AmountInvested large>R$ 407.239,28</AmountInvested>
 					</Earning>
 					<ChartSection>
-						<Chart>
-							<VictoryChart width={350} theme={VictoryTheme.material}>
-								<VictoryBar data={data} x="quarter" y="earnings" />
-							</VictoryChart>
-						</Chart>
+						<CardTitle dark large center>
+							Você está vendo o período desde o início
+						</CardTitle>
+						<VictoryChart style={{ parent: { maxWidth: '100%' } }} theme={VictoryTheme.material}>
+							<VictoryBar data={data} x="quarter" y="earnings" />
+						</VictoryChart>
+						<ChartFilterOption>
+							<Text center large dark bold>
+								1M
+							</Text>
+						</ChartFilterOption>
+						<ChartFilterOption>
+							<Text center large dark bold>
+								3M
+							</Text>
+						</ChartFilterOption>
+						<ChartFilterOption>
+							<Text center large dark bold>
+								1A
+							</Text>
+						</ChartFilterOption>
+						<ChartFilterOption>
+							<Text center large dark bold>
+								2A
+							</Text>
+						</ChartFilterOption>
+						<ChartFilterOption>
+							<Text center large dark bold>
+								TODOS
+							</Text>
+						</ChartFilterOption>
 					</ChartSection>
 				</Card>
 			</View>
