@@ -6,7 +6,7 @@ import img from '../../assets/logo-mobile.png';
 
 const Home = () => {
 	return (
-		<LinearGradient colors={['#5ABEB9', '#9cf184', '#9cf184']} locations={[0.5, 0.9, 1]}>
+		<LinearGradient colors={['#48BCDF', '#5ABEB9', '#9cf184', '#9cf184']} locations={[0.1, 0.3, 0.6, 1]}>
 			<WrapperView>
 				<Header>
 					<Logo source={img} resizeMode="cover" testID="image-element" />
