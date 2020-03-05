@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import LinearGradient from 'react-native-linear-gradient';
 import { WrapperView, HeaderTitle, Header, Logo } from './styled';
 import HomeDetails from '../../components/HomeDetails';
 import img from '../../assets/logo-mobile.png';
+
 
 const Home = () => {
 	return (

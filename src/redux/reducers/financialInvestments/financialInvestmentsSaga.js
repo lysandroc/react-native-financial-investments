@@ -1,17 +1,15 @@
-// import { Alert } from 'react-native';
 import { takeLatest, call, put, all } from 'redux-saga/effects';
+import { FETCH_INVESTMENT_RECORD } from '../../actions/actionTypes';
+import { setInvestmentRecord, setFailure } from '../../actions/financialInvestmentsActions';
+import { getFinancialInvestments } from '../../../services/financialInvestmentsAPI';
 
-// these sagas always accept an action
-function* move(action) {
-	const { direction } = action;
-	// do interesting things
+function* fetchInvestmentRecord(action) {
+	try {
+		const payload = yield call(getFinancialInvestments());
+		yield put(setInvestmentRecord(payload));
+	} catch (error) {
+		yield put(setFailure(error));
+	}
 }
 
-// they're always the last parameter
-function* jump(action) {}
-
-export default all([
-	takeLatest('MOVE', move), // actions are implicitly passed
-	takeLatest('JUMP', jump), // even if you don't want them
-	// takeEvery('SEARCH', search, api), // here we're passing a custom param
-]);
+export default all([takeLatest(FETCH_INVESTMENT_RECORD, fetchInvestmentRecord)]);
