@@ -24,11 +24,15 @@ const reducer = (state = INITIAL_STATE, action) => {
 	return produce(state, draft => {
 		switch (action.type) {
 			case actionTypes.FETCH_INVESTMENT_RECORD:
-				return setFetchMode();
+				// return setFetchMode();
+				return draft;
 			case actionTypes.SET_FAILURE_INVESTMENT_RECORD:
-				return setFailureMode();
+				// return setFailureMode();
+				return draft;
 			case actionTypes.SET_INVESTMENT_RECORD:
-				return setInvestmentRecords(draft, action);
+				// return setInvestmentRecords(draft, action);
+				draft.investmentRecords = action.payload;
+				return draft;
 			default:
 				break;
 		}

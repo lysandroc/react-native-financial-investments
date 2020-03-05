@@ -8,16 +8,13 @@ import { fetchInvestmentRecord } from '../../redux/actions/financialInvestmentsA
 
 const HomeDetails = () => {
 	const dispatch = useDispatch();
-	const { loading, investmentRecords } = useSelector(state => state.financialInvestments);
+	const investmentRecords = useSelector(state => state.financialInvestments.investmentRecords);
 
 	useEffect(() => {
-		dispatch(fetchInvestmentRecord);
+		dispatch(fetchInvestmentRecord());
 	}, [dispatch]);
 
-	useEffect(() => {
-		const a = investmentRecords;
-		const b = a;
-	}, [investmentRecords]);
+	useEffect(() => {}, [investmentRecords]);
 
 	return (
 		<Card elevation={5}>
