@@ -1,4 +1,4 @@
-import { FETCH_INVESTMENT_RECORD, SET_INVESTMENT_RECORD, SET_FAILURE_INVESTMENT_RECORD } from './actionTypes';
+import { FETCH_INVESTMENT_RECORD, SET_INVESTMENT_RECORD, SET_FAILURE } from './actionTypes';
 
 export const fetchInvestmentRecord = () => ({
 	type: FETCH_INVESTMENT_RECORD,
@@ -10,6 +10,6 @@ export const setInvestmentRecord = payload => ({
 });
 
 export const setFailure = payload => ({
-	type: SET_FAILURE_INVESTMENT_RECORD,
+	type: SET_FAILURE,
 	payload,
 });

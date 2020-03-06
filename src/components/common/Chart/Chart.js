@@ -3,12 +3,12 @@ import { VictoryArea, VictoryChart, VictoryTheme } from 'victory-native';
 import { WrapperView, Title } from './styled';
 import ChartFilter from '../ChartFilter';
 
-const Chart = ({ data }) => {
+const Chart = ({ data = [] }) => {
 	const [label, setLabel] = useState();
 	return (
 		<WrapperView>
 			<Title dark center>
-				periodo desde {label}
+				{label}
 			</Title>
 			<VictoryChart style={{ parent: { maxWidth: '100%' } }} theme={VictoryTheme.material}>
 				<VictoryArea

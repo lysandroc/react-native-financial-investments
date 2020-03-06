@@ -8,18 +8,16 @@ import { fetchInvestmentRecord } from '../../redux/actions/financialInvestmentsA
 
 const HomeDetails = () => {
 	const dispatch = useDispatch();
-	const investmentRecords = useSelector(state => state.financialInvestments.investmentRecords);
+	const records = useSelector(state => state.financialInvestments.records);
 
 	useEffect(() => {
-		dispatch(fetchInvestmentRecord());
-	}, [dispatch]);
-
-	useEffect(() => {}, [investmentRecords]);
+		if (records.length === 0) dispatch(fetchInvestmentRecord());
+	}, [dispatch, records]);
 
 	return (
 		<Card elevation={5}>
 			<EarningHeader />
-			<Chart data={investmentRecords} />
+			<Chart data={records} />
 		</Card>
 	);
 };

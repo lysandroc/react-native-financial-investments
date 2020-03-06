@@ -2,7 +2,7 @@ import produce from 'immer';
 import * as actionTypes from '../../actions/actionTypes';
 
 const INITIAL_STATE = {
-	investmentRecords: [],
+	records: [],
 };
 
 const setFetchMode = (draft, action) => {
@@ -15,8 +15,8 @@ const setFailureMode = (draft, action) => {
 	return draft;
 };
 
-const setInvestmentRecords = (draft, action) => {
-	draft.investmentRecords = action.payload;
+const setRecords = (draft, action) => {
+	draft.records = action.payload;
 	return draft;
 };
 
@@ -24,15 +24,11 @@ const reducer = (state = INITIAL_STATE, action) => {
 	return produce(state, draft => {
 		switch (action.type) {
 			case actionTypes.FETCH_INVESTMENT_RECORD:
-				// return setFetchMode();
-				return draft;
-			case actionTypes.SET_FAILURE_INVESTMENT_RECORD:
-				// return setFailureMode();
-				return draft;
+				return setFetchMode();
+			case actionTypes.SET_FAILURE:
+				return setFailureMode();
 			case actionTypes.SET_INVESTMENT_RECORD:
-				// return setInvestmentRecords(draft, action);
-				draft.investmentRecords = action.payload;
-				return draft;
+				return setRecords(draft, action);
 			default:
 				break;
 		}

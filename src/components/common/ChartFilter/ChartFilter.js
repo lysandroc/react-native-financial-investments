@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import Text from '../Text';
 
 const options = [
-	{ description: '1M', period: 1, label: 'o ultimo mês' },
-	{ description: '3M', period: 3, label: 'os três últimos meses' },
-	{ description: '1A', period: 12, label: 'o ultimo ano' },
-	{ description: '2A', period: 24, label: 'os dois ultimos anos' },
-	{ description: 'Todos', period: 0, label: 'do inicio' },
+	{ description: '1M', period: 1, label: 'periodo desde o ultimo mês' },
+	{ description: '3M', period: 3, label: 'periodo desde os três últimos meses' },
+	{ description: '1A', period: 12, label: 'periodo desde o ultimo ano' },
+	{ description: '2A', period: 24, label: 'periodo desde os dois ultimos anos' },
+	{ description: 'Todos', period: 0, label: 'periodo desde do inicio' },
 ];
 
 const ChartFilter = ({ setLabel }) => {
