@@ -23,16 +23,15 @@ const setRecords = (draft, action) => {
 const reducer = (state = INITIAL_STATE, action) => {
 	return produce(state, draft => {
 		switch (action.type) {
-			case actionTypes.FETCH_INVESTMENT_RECORD:
-				return setFetchMode();
-			case actionTypes.SET_FAILURE:
-				return setFailureMode();
+			// case actionTypes.FETCH_INVESTMENT_RECORD:
+			// 	return setFetchMode(draft, action);
+			// case actionTypes.SET_FAILURE:
+			// 	return setFailureMode(draft, action);
 			case actionTypes.SET_INVESTMENT_RECORD:
 				return setRecords(draft, action);
 			default:
-				break;
+				return state;
 		}
-		return state;
 	});
 };
 
