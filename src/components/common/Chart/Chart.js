@@ -16,10 +16,10 @@ const Chart = ({ data = [] }) => {
 					data={data}
 					x="day"
 					y="yieldValue"
-					animate={{
-						duration: 2000,
-						onLoad: { duration: 2000 },
-					}}
+					// animate={{
+					// 	duration: 1000,
+					// 	onLoad: { duration: 1000 },
+					// }}
 				/>
 			</VictoryChart>
 			<ChartFilter setLabel={setLabel} />

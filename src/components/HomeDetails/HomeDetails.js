@@ -11,7 +11,7 @@ const HomeDetails = () => {
 	const records = useSelector(state => state.financialInvestments.records);
 
 	useEffect(() => {
-		if (records.length === 0) dispatch(fetchInvestmentRecord());
+		dispatch(fetchInvestmentRecord());
 	}, [dispatch, records]);
 
 	return (
