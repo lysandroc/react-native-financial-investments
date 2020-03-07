@@ -8,7 +8,7 @@ const options = [
 	{ description: '3M', period: 3, label: 'periodo desde os três últimos meses' },
 	{ description: '1A', period: 12, label: 'periodo desde o ultimo ano' },
 	{ description: '2A', period: 24, label: 'periodo desde os dois ultimos anos' },
-	{ description: 'Todos', period: 0, label: 'periodo desde do inicio' },
+	{ description: 'TODOS', period: 0, label: 'periodo desde do inicio' },
 ];
 
 const ChartFilter = ({ setLabel }) => {
@@ -30,7 +30,7 @@ const ChartFilter = ({ setLabel }) => {
 					}}
 					selected={filter.period === option.period}
 				>
-					<Text center large dark>
+					<Text center dark>
 						{option.description}
 					</Text>
 				</OptionTouchable>

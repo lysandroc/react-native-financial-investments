@@ -1,16 +1,18 @@
 import React from 'react';
 import { WrapperView, Earning, Percentage, MoneyInvested } from './styled';
 
-const EarningHeader = () => {
+import { currency } from '../../../utils/masks';
+
+const EarningHeader = ({ amountInvested = 0 }) => {
 	return (
 		<WrapperView>
 			<Earning dark center>
-				R$ 817.239,28
+				R$ {currency.mask(amountInvested)}
 			</Earning>
 			<Percentage bold large center>
-				+280%
+				+150%
 			</Percentage>
-			<MoneyInvested large>R$ 407.239,28</MoneyInvested>
+			<MoneyInvested large>R$ {currency.mask(amountInvested / 2.5)}</MoneyInvested>
 		</WrapperView>
 	);
 };

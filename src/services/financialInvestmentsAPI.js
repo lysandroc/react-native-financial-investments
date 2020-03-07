@@ -1,12 +1,9 @@
 import axios from 'axios';
-import moment from 'moment';
+import { toHashMap } from '../utils/mutations';
+
 import { financialInvestmentsURL } from '../utils/Urls';
 
 export const getFinancialInvestments = async () => {
 	const { data } = await axios.get(financialInvestmentsURL);
-	const formattedData = data.map(([day, yieldValue]) => ({
-		day: moment(day).format('MM/YYYY'),
-		yieldValue,
-	}));
-	return formattedData;
+	return toHashMap(data);
 };

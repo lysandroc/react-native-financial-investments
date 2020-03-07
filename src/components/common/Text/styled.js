@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 const Text = styled.Text`
 	align-items: center;
 	justify-content: center;
-	font-family: 'Poppins-Bold';
+	font-family: 'Poppins-Regular';
 	font-weight: ${({ bold }) => (bold ? 'bold' : 'normal')};
 	font-size: ${({ large }) => (large ? '16px' : '14px')};
 	text-align: ${({ center }) => (center ? 'center' : 'left')};
