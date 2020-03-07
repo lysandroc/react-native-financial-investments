@@ -4,6 +4,9 @@ import { financialInvestmentsURL } from '../utils/Urls';
 
 export const getFinancialInvestments = async () => {
 	const { data } = await axios.get(financialInvestmentsURL);
-	const formattedData = data.map(([day, yieldValue]) => ({ day, yieldValue }));
+	const formattedData = data.map(([day, yieldValue]) => ({
+		day: moment(day).format('MM/YYYY'),
+		yieldValue,
+	}));
 	return formattedData;
 };
