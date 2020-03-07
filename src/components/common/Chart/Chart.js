@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { VictoryChart, VictoryTheme } from 'victory-native';
 import { WrapperView, Title } from './styled';
 import ChartFilter from '../ChartFilter';
-import ChartFinancialInvestments from '../ChartFinancialInvestments';
 
-const Chart = ({ data = [] }) => {
+const Chart = ({ children }) => {
 	const [label, setLabel] = useState();
 
 	return (
@@ -12,9 +11,7 @@ const Chart = ({ data = [] }) => {
 			<Title dark center>
 				{label}
 			</Title>
-
-			<ChartFinancialInvestments data={data} />
-
+			{children}
 			<ChartFilter setLabel={setLabel} />
 		</WrapperView>
 	);

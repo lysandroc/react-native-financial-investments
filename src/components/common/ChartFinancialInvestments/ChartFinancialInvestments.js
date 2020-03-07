@@ -14,7 +14,7 @@ const ChartFinancialInvestments = ({ data = [] }) => {
 			<VictoryAxis standalone={false} fixLabelOverlap tickFormat={date => moment(date, 'DD/MM/YYYY').format('MM/YYYY')} />
 			<VictoryArea
 				style={{
-					data: { fill: '#48BCDF', fillOpacity: 0.7, stroke: 'gray', strokeWidth: 1 },
+					data: { fill: '#48BCDF', fillOpacity: 0.6 },
 				}}
 				labelComponent={<VictoryLabel dy={15} dx={15} />}
 				labels={({ datum, data: { length }, index }) => {
