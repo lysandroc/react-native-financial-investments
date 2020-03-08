@@ -34,17 +34,19 @@ const HomeDetails = ({ fetchInvestment, records }) => {
 
 const recordSelector = createSelector(
 	store => {
-		const { records } = store.financialInvestments;
-		return { records };
+		const { records, recordsFiltered } = store.financialInvestments;
+		return { records, recordsFiltered };
 	},
-	({ records }) => {
-		return records;
+	({ records, recordsFiltered }) => {
+		return recordsFiltered || records;
 	}
 );
 
-const mapStateToProps = state => ({
-	records: recordSelector(state),
-});
+const mapStateToProps = state => {
+	return {
+		records: recordSelector(state),
+	};
+};
 
 const mapDispatchToProps = {
 	fetchInvestment: fetchInvestmentRecord,

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { VictoryChart, VictoryTheme } from 'victory-native';
 import { WrapperView, Title } from './styled';
-import ChartFilter from '../ChartFilter';
+import ChartFinancialInvestmentsFilter from '../ChartFinancialInvestmentsFilter';
 
 const Chart = ({ children }) => {
 	const [label, setLabel] = useState();
@@ -12,7 +12,7 @@ const Chart = ({ children }) => {
 				{label}
 			</Title>
 			{children}
-			<ChartFilter setLabel={setLabel} />
+			<ChartFinancialInvestmentsFilter setLabel={setLabel} />
 		</WrapperView>
 	);
 };
