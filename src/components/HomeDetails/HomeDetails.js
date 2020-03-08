@@ -19,7 +19,7 @@ const HomeDetails = ({ fetchInvestment, records }) => {
 
 	useEffect(() => {
 		const lastRecord = sortByDate(Object.values(records), 'day').pop();
-		setAmountInvested(lastRecord.yieldValue);
+		if (lastRecord) setAmountInvested(lastRecord.yieldValue);
 	}, [records]);
 
 	return (
