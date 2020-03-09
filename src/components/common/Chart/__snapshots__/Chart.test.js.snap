@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test <Chart/> snapshot should be valid 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignContent": "center",
+            "display": "flex",
+            "flexBasis": "100%",
+            "flexDirection": "row",
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "flexWrap": "wrap",
+          },
+        ]
+      }
+    >
+      <Text
+        accessibilityLabel="period-label"
+        center={true}
+        dark={true}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "color": "#1c2124",
+              "flexBasis": "100%",
+              "fontFamily": "Poppins-MediumItalic",
+              "fontSize": 18,
+              "fontWeight": "normal",
+              "justifyContent": "center",
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        Período: 
+        period text here
+      </Text>
+      <View>
+        <Text
+          accessibilityLabel="children-text"
+        >
+          children here
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
