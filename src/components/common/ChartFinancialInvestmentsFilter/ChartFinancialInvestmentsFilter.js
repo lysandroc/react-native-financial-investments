@@ -53,6 +53,7 @@ const ChartFinancialInvestmentsFilter = ({ setLabel }) => {
 						setFilter(option);
 					}}
 					selected={filter.period === option.period}
+					accessibilityLabel={`button-period-${option.period}`}
 				>
 					<Text center dark>
 						{option.description}
