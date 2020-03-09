@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { VictoryChart, VictoryTheme } from 'victory-native';
+import React from 'react';
 import { WrapperView, Title } from './styled';
 
 const Chart = ({ children, label }) => {
