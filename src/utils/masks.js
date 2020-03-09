@@ -8,7 +8,4 @@ export const currency = {
 			.replace('.', ',')
 			.replace(/\d(?=(\d{3})+,)/g, '$&.');
 	},
-	unmask(mask) {
-		return mask.replace(/\D/g, '');
-	},
 };
