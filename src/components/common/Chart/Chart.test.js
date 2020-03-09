@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { render, cleanup } from '@testing-library/react-native';
-import Chart from '../Chart';
+import Chart from './Chart';
 
 describe('should test <Chart/>', () => {
 	let component;
