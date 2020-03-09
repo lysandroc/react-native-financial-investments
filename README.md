@@ -3,7 +3,8 @@
 > Informações para o cliente sobre seus investimentos
 
 Inicialmente o aplicativo foi desenvolvido para o usuário visualizar todo o histórico criado de seus investimentos. Mas foi projetado para que cada "Card" possua informações sobre investimentos já feito, projeções, ou até mesmo mostrar o perfil do investidor.
-![](./application.png)
+
+![Financial Investments](./application.png)
 
 ## Execução
 
