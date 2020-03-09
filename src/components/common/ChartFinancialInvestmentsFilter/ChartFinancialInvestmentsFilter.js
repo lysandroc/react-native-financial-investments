@@ -8,11 +8,11 @@ import Text from '../Text';
 import { sortByDate } from '../../../utils/commons';
 
 const options = [
-	{ description: '1M', period: 1, label: 'periodo desde o ultimo mês' },
-	{ description: '3M', period: 3, label: 'periodo desde os três últimos meses' },
-	{ description: '1A', period: 12, label: 'periodo desde o ultimo ano' },
-	{ description: '2A', period: 24, label: 'periodo desde os dois ultimos anos' },
-	{ description: 'TODOS', period: 0, label: 'periodo desde do inicio' },
+	{ description: '1M', period: 1, label: 'último mês' },
+	{ description: '3M', period: 3, label: 'três últimos meses' },
+	{ description: '1A', period: 12, label: 'último ano' },
+	{ description: '2A', period: 24, label: 'dois últimos anos' },
+	{ description: 'TODOS', period: 0, label: 'desde o início' },
 ];
 
 const ChartFinancialInvestmentsFilter = ({ setLabel }) => {

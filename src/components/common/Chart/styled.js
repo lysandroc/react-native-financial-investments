@@ -12,4 +12,5 @@ export const WrapperView = styled.View`
 export const Title = styled(Text)`
 	flex-basis: 100%;
 	font-size: 18px;
+	font-family: 'Poppins-MediumItalic';
 `;

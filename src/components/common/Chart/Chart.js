@@ -6,7 +6,7 @@ const Chart = ({ children, label }) => {
 	return (
 		<WrapperView>
 			<Title dark center>
-				{label}
+				Periodo: {label}
 			</Title>
 			{children}
 		</WrapperView>
