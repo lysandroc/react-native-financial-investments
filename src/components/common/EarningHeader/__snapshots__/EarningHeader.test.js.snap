@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test <HeaderImage/> snapshot should be valid 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignContent": "flex-end",
+            "flexBasis": "20%",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          },
+        ]
+      }
+    >
+      <Text
+        accessibilityLabel="earning-value"
+        center={true}
+        dark={true}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "color": "#505d65",
+              "flexBasis": "100%",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 42,
+              "fontWeight": "normal",
+              "justifyContent": "center",
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        R$ 
+        1.000,00
+      </Text>
+      <Text
+        accessibilityLabel="percentage-value"
+        bold={true}
+        center={true}
+        large={true}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "color": "green",
+              "flexBasis": "50%",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16,
+              "fontWeight": "bold",
+              "justifyContent": "center",
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        +150%
+      </Text>
+      <Text
+        accessibilityLabel="earning-invested"
+        large={true}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "color": "#505d65",
+              "flexBasis": "50%",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "fontFamily": "Poppins-Regular",
+              "fontSize": 16,
+              "fontWeight": "normal",
+              "justifyContent": "center",
+              "textAlign": "left",
+            },
+          ]
+        }
+      >
+        R$ 
+        400,00
+      </Text>
+    </View>
+  </View>
+</View>
+`;
